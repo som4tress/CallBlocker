@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zebra.SES.CallManager"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:icon="@drawable/icon_block"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver android:name=".IncomingCallController" >
+            <intent-filter android:priority="1000" >               
+                <action android:name="android.intent.action.PHONE_STATE" />                
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".OutgoingCallController" >
+            <intent-filter android:priority="1000" >               
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />                
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/icon_block"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NumberList"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light" >
+        </activity>
+        <activity
+            android:name=".DBListActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dip"
+        android:shrinkColumns="2"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Incoming Calls"
+                android:textColor="#003F87"
+                android:textSize="28dp"
+                android:textStyle="bold" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#FF0000" />
+
+    <RadioGroup
+        android:id="@+id/radGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="50dp" >
+
+        <RadioButton
+            android:id="@+id/blockAllInoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Block all incoming"
+            android:textStyle="bold" />
+        
+        <RadioButton
+            android:id="@+id/cancelIncomingBlocker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allow all incoming"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/blockIncomingFromList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Block incoming only from list"
+            android:textStyle="bold" />
+        
+        <RadioButton
+            android:id="@+id/allowIncomingFromList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allow incoming only from list"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#FF0000" />
+    
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dip"
+        android:shrinkColumns="2"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Outgoing Calls"
+                android:textColor="#003F87"
+                android:textSize="28dp"
+                android:textStyle="bold" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#FF0000" />
+    
+    <RadioGroup
+        android:id="@+id/radGroup2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="50dp" >
+
+        <RadioButton
+            android:id="@+id/blockAllOutgoing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Block all outgoing"
+            android:textStyle="bold" />
+        
+        <RadioButton
+            android:id="@+id/cancelOutgoingBlocker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allow all outgoing"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/blockOutgoingFromList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Block outgoing only from list"
+            android:textStyle="bold" />
+        
+        <RadioButton
+            android:id="@+id/allowOutgoingFromList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allow outgoing only from list"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dip"
+        android:background="#FF0000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Add Number To List" />
+
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Show List" />
+    </RelativeLayout>
+
+</LinearLayout>
